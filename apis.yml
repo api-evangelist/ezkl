@@ -1,7 +1,29 @@
 aid: ezkl
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ezkl.png
 name: EZKL
-description: EZKL is a company surfaced as a portfolio company of bloomberg-beta and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  EZKL (by Zkonduit Inc.) is a developer-friendly engine for verifiable AI and
+  analytics that generates zero-knowledge proofs (ZK-SNARKs, Halo2) for machine
+  learning model inference. Given a model in ONNX format and sample input, EZKL
+  automatically compiles a proving circuit and produces a cryptographic proof
+  that a computation ran correctly without revealing the underlying private data
+  or model weights. Proofs are verifiable on-chain (EVM-compatible), in the
+  browser, or on edge devices. EZKL ships as a command-line tool, Python and
+  JavaScript (WebAssembly) bindings, and a Rust library, and supports tree-based
+  models, transformers, CNNs, and RNNs. Lilith is its high-performance compute
+  cluster for cloud-scale proof generation. The codebase was audited by Trail of
+  Bits and is developed in the open at github.com/zkonduit/ezkl.
 url: https://raw.githubusercontent.com/api-evangelist/ezkl/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +33,19 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Zero-Knowledge Proofs
+- Machine Learning
+- Verifiable AI
+- ZKML
+- Cryptography
+- ONNX
+- Blockchain
+- Open Source
+- SDK
+- CLI
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +55,30 @@ maintainers:
 common:
 - type: Website
   url: https://ezkl.xyz/
+- type: Documentation
+  url: https://docs.ezkl.xyz/
+- type: GettingStarted
+  url: https://docs.ezkl.xyz/
+- type: Blog
+  url: https://blog.ezkl.xyz/
+- type: GitHubOrganization
+  url: https://github.com/zkonduit
+- type: SourceCode
+  url: https://github.com/zkonduit/ezkl
+- type: Support
+  url: https://github.com/zkonduit/ezkl/discussions
+- type: Packages
+  url: packages/ezkl-packages.yml
+- type: SDKs
+  url: packages/ezkl-packages.yml
+- type: CLI
+  url: cli/ezkl-cli.yml
+- type: LLMsTxt
+  url: llms/ezkl-llms.txt
+- type: DomainSecurity
+  url: security/ezkl-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,54 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/zkonduit/ezkl README + https://docs.ezkl.xyz/
+name: ezkl
+description: >-
+  The EZKL command-line tool compiles an ONNX model and sample input into a
+  Halo2 ZK-SNARK circuit, then generates and verifies zero-knowledge proofs of
+  the model's inference. It is the same engine exposed by the Python, JavaScript,
+  and Rust bindings.
+install:
+  - method: shell
+    command: curl https://raw.githubusercontent.com/zkonduit/ezkl/main/install_ezkl_cli.sh | bash
+  - method: cargo
+    command: cargo install --locked ezkl
+  - method: source
+    command: git clone https://github.com/zkonduit/ezkl && cd ezkl && cargo install --locked --path .
+command_groups:
+  - group: circuit-preparation
+    description: Turn an ONNX model into a calibrated, compiled proving circuit.
+    commands:
+      - name: gen-settings
+        description: Generate the circuit settings (parameters) from an ONNX model.
+      - name: calibrate-settings
+        description: Calibrate settings (scale, logrows) against sample data for accuracy/size.
+      - name: compile-circuit
+        description: Compile the ONNX model into an EZKL circuit given the settings.
+  - group: keys-and-witness
+    description: Set up proving/verifying keys and compute the witness.
+    commands:
+      - name: setup
+        description: Run the trusted/universal setup to produce proving and verifying keys.
+      - name: gen-witness
+        description: Generate the witness for the circuit from an input file.
+  - group: proving-and-verifying
+    description: Produce and check zero-knowledge proofs.
+    commands:
+      - name: mock
+        description: Run a mock proof to sanity-check the circuit without full proving.
+      - name: prove
+        description: Generate a zero-knowledge proof of the model's inference.
+      - name: verify
+        description: Verify a generated proof against the verifying key.
+  - group: evm-verification
+    description: Produce and deploy on-chain (EVM) verifiers.
+    commands:
+      - name: create-evm-verifier
+        description: Generate a Solidity smart-contract verifier for the proof.
+      - name: deploy-evm-verifier
+        description: Deploy the generated EVM verifier contract on-chain.
+key_flows:
+  - name: Prove an ONNX model end-to-end
+    steps: [gen-settings, calibrate-settings, compile-circuit, setup, gen-witness, prove, verify]
+  - name: On-chain verifiable inference
+    steps: [compile-circuit, setup, prove, create-evm-verifier, deploy-evm-verifier]

@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: PyPI, npm registry, crates.io, and zkonduit/ezkl README
+packages:
+  - language: python
+    registry: pypi
+    name: ezkl
+    version: 23.0.5
+    url: https://pypi.org/project/ezkl/
+    install: pip install ezkl
+    repository: https://github.com/zkonduit/ezkl
+    description: Python bindings for the EZKL zero-knowledge machine learning engine.
+    official: true
+  - language: python
+    registry: pypi
+    name: ezkl-gpu
+    version: 16.1.0
+    url: https://pypi.org/project/ezkl-gpu/
+    install: pip install ezkl-gpu
+    repository: https://github.com/zkonduit/ezkl
+    description: GPU-accelerated (Icicle/NVIDIA) build of the EZKL Python bindings.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@ezkljs/engine"
+    version: 22.0.1
+    url: https://www.npmjs.com/package/@ezkljs/engine
+    install: npm install @ezkljs/engine
+    repository: https://github.com/zkonduit/ezkl
+    description: WebAssembly/JavaScript bindings for the EZKL engine (browser and Node.js).
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@ezkljs/hub"
+    version: 0.3.2
+    url: https://www.npmjs.com/package/@ezkljs/hub
+    install: npm install @ezkljs/hub
+    repository: https://github.com/zkonduit/ezkl
+    description: Client library for integrating the EZKL Hub proving service into an app.
+    official: true
+  - language: rust
+    registry: crates.io
+    name: ezkl
+    url: https://crates.io/crates/ezkl
+    install: cargo install --locked ezkl
+    repository: https://github.com/zkonduit/ezkl
+    description: The core EZKL Rust library and CLI (Halo2-based ZKML proving engine).
+    official: true
