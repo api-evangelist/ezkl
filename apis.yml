@@ -1,6 +1,10 @@
 aid: ezkl
 deliveryModel:
   model: unknown
+  license_evidence:
+    repo: zkonduit/ezkl
+    spdx: none
+    stars: 1222
   open_source: unknown
   commercial: false
   callable_host: false
@@ -8,7 +12,7 @@ deliveryModel:
   confidence: low
   source:
   - repository-unlicensed
-  generated: '2026-08-28'
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
@@ -48,13 +52,13 @@ modified: '2026-07-19'
 tags:
 - Company
 - Zero-Knowledge Proofs
-- Machine-Learning
+- Machine Learning
 - Verifiable AI
 - ZKML
 - Cryptography
 - ONNX
 - Blockchain
-- Open-Source
+- Open Source
 - SDK
 - CLI
 tags_raw:
@@ -69,6 +73,8 @@ tags_raw:
 - Open Source
 - SDK
 - CLI
+- Machine-Learning
+- Open-Source
 apis: []
 maintainers:
 - FN: Kin Lane
